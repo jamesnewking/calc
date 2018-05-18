@@ -24,14 +24,12 @@ body {
 
 }
 
-
-
 .topDisplay {
     font-family: digitalType;
     font-size: 5vmin;
     text-align: right;
     color: #5bc0de;
-    height: 20vh;
+    height: 5vh;
     width: 100%;
     background-color: black;
     padding-top: 4vh;
