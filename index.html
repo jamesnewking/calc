@@ -8,82 +8,98 @@
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script src="http://Learning-Fuze.github.io/calculator/calculator.js"></script>
     <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="calcPlastic">
 
-        <div class="topDisplay">
-            TopDisplay
+<div class ="horizontal_borders instructions"> <em class="calcTop">CALCULATOR </em> by James Wang</div>
+<div class ="mainCenter">
+    <div class="fill">
+        <div class="calcPlastic">
+                <div class="topDisplay onTop">
+                    Calculator
+                </div>
+                <div class="topDisplay outResults">
+                    0
+                </div>
+                <div class="pressableButtons">
+                    <div class="c_row">
+                        <div class="space doubleWide">
+                            <div class="button specialFun">AC</div>
+                        </div>
+
+                        <div class="space">
+                            <div id="debugMessages" class="button specialFun">&#9888</div>
+                        </div>
+                        <div class="space">
+                            <div class="button operator">/</div>
+                        </div>
+                    </div>
+                    <div class="c_row">
+                        <div class="space">
+                            <div class="button">7</div>
+                        </div>
+                        <div class="space">
+                            <div class="button">8</div>
+                        </div>
+                        <div class="space">
+                            <div class="button">9</div>
+                        </div>
+                        <div class="space">
+                            <div class="button operator">x</div>
+                        </div>
+                    </div>
+                    <div class="c_row">
+                        <div class="space">
+                            <div class="button">4</div>
+                        </div>
+                        <div class="space">
+                            <div class="button">5</div>
+                        </div>
+                        <div class="space">
+                            <div class="button">6</div>
+                        </div>
+                        <div class="space">
+                            <div class="button operator">-</div>
+                        </div>
+                    </div>
+                    <div class="c_row">
+                        <div class="space">
+                            <div class="button">1</div>
+                        </div>
+                        <div class="space">
+                            <div class="button">2</div>
+                        </div>
+                        <div class="space">
+                            <div class="button">3</div>
+                        </div>
+                        <div class="space">
+                            <div class="button operator">+</div>
+                        </div>
+                    </div>
+                    <div class="c_row">
+                        <div class="space doubleWide">
+                            <div class="button doubleButton">0</div>
+                        </div>
+                        <div class="space">
+                            <div class="button">.</div>
+                        </div>
+                        <div class="space">
+                            <div class="button operator">=</div>
+                        </div>
+                    </div>
+                </div>
+
         </div>
-        <div class="topDisplay outResults">
-            0
-        </div>
-        <div class="pressableButtons">
-            <div class="space">
-                <div class="button specialFun">AC</div>
-            </div>
-            <div class="space">
-                <div class="button specialFun">AC</div>
-            </div>
-            <div class="space">
-                <div class="button specialFun">AC</div>
-            </div>
-            <div class="space">
-                <div class="button operator">/</div>
-            </div>
-            <div class="space">
-                <div class="button">7</div>
-            </div>
-            <div class="space">
-                <div class="button">8</div>
-            </div>
-            <div class="space">
-                <div class="button">9</div>
-            </div>
-            <div class="space">
-                <div class="button operator">x</div>
-            </div>
-            <div class="space">
-                <div class="button">4</div>
-            </div>
-            <div class="space">
-                <div class="button">5</div>
-            </div>
-            <div class="space">
-                <div class="button">6</div>
-            </div>
-            <div class="space">
-                <div class="button operator">-</div>
-            </div>
-            <div class="space">
-                <div class="button">1</div>
-            </div>
-            <div class="space">
-                <div class="button">2</div>
-            </div>
-            <div class="space">
-                <div class="button">3</div>
-            </div>
-            <div class="space">
-                <div class="button operator">+</div>
-            </div>
-            <div class="space doubleWide">
-                <div class="button doubleButton">0</div>
-            </div>
-
-            <div class="space">
-                <div class="button">.</div>
-            </div>
-            <div class="space">
-                <div class="button operator">=</div>
-            </div>
+    </div>
+    <div id="debugArea" class="fill">
+        <div class="calcOutput">
 
         </div>
-
+    </div>
 </div>
-
-
+<div class ="horizontal_borders instructions">press ⚠ button to toggle debug mode</div>
 </body>
 </html>

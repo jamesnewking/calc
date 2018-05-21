@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     position: absolute;
@@ -5,6 +6,13 @@ body {
     height: 100%;
     font-size: 0;
     font-weight: bold;
+    box-sizing: border-box;
+    background-color: #66afe9;
+    background-image: url("images/images-free_9q_r7V3Oj8.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
 }
 
 @font-face {
@@ -12,16 +20,31 @@ body {
     src: url(fonts/DIGITALDREAM.TTF);
 }
 
+.horizontal_borders {
+    height: 10vmin;
+}
+
+.calcTop {
+    font-weight: bold;
+    font-size: 6vmin;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.fill {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    /*padding: 5vmin; */
+}
+
 .calcPlastic {
-
-    top: 0;
-    left: 0;
-    height: 75vh;
-    width: 48vw;
-    background-color: gray;
-    min-width: 300px;
+    display: inline-block;
+    width: 48vmin;
     min-height: 300px;
-
+    min-width: 200px;
+    border: solid white;
+    border-radius: 2vmin;
+    background-color: #122b40;
 }
 
 .topDisplay {
@@ -29,46 +52,116 @@ body {
     font-size: 5vmin;
     text-align: right;
     color: #5bc0de;
-    height: 5vh;
+    height: 5vmin;
     width: 100%;
     background-color: black;
-    padding-top: 4vh;
+    padding-top: 3vmin;
+    overflow: hidden;
+}
+
+.c_row {
+    height: 20%;
 }
 
 .pressableButtons {
     text-align: center;
     background-color: #122b40;
+    border-radius: 0 0 2vmin 2vmin;
+}
+
+.onTop {
+    border-radius: 2vmin 2vmin 0 0;
 }
 
 .button {
-    color: black;
-    font-size: 2rem;
-    height: 10vh;
-    width: 10vw;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 5vmin;
+    text-shadow: 2px 2px black;
+    /*height: 10vh;*/
+    line-height: 200%;
+    height: 90%;
     border-radius: 10vmin;
     background-color: #2e6da4;
-    box-shadow: 0.5vmin 0.5vmin 0.5vmin 0.5vmin #000000;
-    padding: 2vmin  1vmin  2vmin   1vmin;
+    vertical-align: middle;
+    box-shadow: 0.5vmin 0.3vmin 0.5vmin 0.3vmin #000000;
+
+    /*padding: 2vmin  1vmin  2vmin   1vmin; */
+}
+
+.button:hover {
+    background-color: #a6e1ec;
 }
 
 .space {
-    padding: 1vh;
+    padding: 1%;
     display: inline-block;
+    width: 22%;
+    height: 100%
 }
 
 .doubleWide {
-    width:23vw;
-
+    width:46%;
 }
 
 .doubleButton {
-    width: 20vw;
+    width: 100%;
 }
 
 .operator {
+    color: black;
     background-color: yellow;
+    text-shadow: 1px 1px white;
 }
 
 .specialFun {
+    color: black;
     background-color: #eea236;
+    text-shadow: 1px 1px white;
 }
+
+.greyOut {
+    background-color: grey;
+}
+
+.instructions {
+    text-align: center;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 5vmin;
+    text-shadow: 2px 2px 5px white;
+}
+
+.calcOutput {
+    vertical-align: text-bottom;
+    display: inline-block;
+    width: 50vmin;
+    border: solid white;
+    border-radius: 2vmin;
+    background-color: black;
+    min-height: 300px;
+}
+
+.fullCalculation {
+    position: relative;
+    font-family: digitalType;
+    font-size: 5vmin;
+    text-align: right;
+
+    color: #5bc0de;
+    animation-name: dropping;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes dropping {
+    0%   {top:0vh;}
+    100% {top:40vh;}
+}
+
+@media screen and (max-width: 768px) {
+
+    .calcOutput {
+        display: none;
+    }
+} /*this will accommodate for mobile viewports */
