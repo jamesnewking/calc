@@ -312,9 +312,9 @@ function displayOnTop(){
     else {
     $('.topDisplay').text(outChar);}
     displayOnBottom(outChar);
-    console.log('array ' , calcArray);
-    console.log('operator ' , tempOperator);
-    console.log('2ndNum ' , temp2ndNum);
+    //console.log('array ' , calcArray);
+    //console.log('operator ' , tempOperator);
+    //console.log('2ndNum ' , temp2ndNum);
 }
 
 function displayOnBottom(inDisplay){

@@ -93,6 +93,10 @@ body {
     background-color: #a6e1ec;
 }
 
+.button:active {
+    box-shadow: 5px 5px gray inset;
+}
+
 .space {
     padding: 1%;
     display: inline-block;
