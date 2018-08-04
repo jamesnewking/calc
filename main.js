@@ -1,5 +1,3 @@
-
-
 var calcArray = [];
 var outChar = "";
 var tempOperator;
