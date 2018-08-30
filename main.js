@@ -241,14 +241,14 @@ function mathEngine(number1, calcOperator, number2){
             calcArray[0] = number1 - number2;
             break;
         case 'x':
-            calcArray[0] = number1 * number2;
+            calcArray[0] = Number((number1 * number2).toPrecision(9));
             break;
         case '/':
             if (temp2ndNum === 0) {
                 divByZero = true;
                 break;
             };
-            calcArray[0] = number1 / number2;
+            calcArray[0] = Number((number1 / number2).toPrecision(9));
             break;
     }
 }
