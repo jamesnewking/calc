@@ -5,7 +5,7 @@ var temp2ndNum = "";//to track old value from number to string? so we can do mat
 var divByZero = false;
 var buttonsPressed = '';
 var originalRepeatVal = null;
-var maxLength = 10;
+var maxLength = 9;
 var toggleTop = 1;
 
 $(document).ready(initializeApp);
@@ -29,7 +29,7 @@ function whichButton(){
             insertDecimal(val);
             break;
         case 'x':
-        case '/':
+        case '÷':
         case '+':
         case '-':
             insertOperator(val);
@@ -158,7 +158,6 @@ function insertDecimal(inChar) {
         //true statement because can't find '.' in the previous element so must be a whole number
         //previous element is an integer
         concatPreviousNum('.');
-        //calcArray.push(inChar); //bug?
     }
 }
 
@@ -235,20 +234,20 @@ function equalsPressed(){
 function mathEngine(number1, calcOperator, number2){
     switch (calcOperator) {
         case '+':
-            calcArray[0] = number1 + number2;
+            calcArray[0] = Number((number1 + number2).toPrecision(12));
             break;
         case '-':
-            calcArray[0] = number1 - number2;
+            calcArray[0] = Number((number1 - number2).toPrecision(12));
             break;
         case 'x':
-            calcArray[0] = Number((number1 * number2).toPrecision(9));
+            calcArray[0] = Number((number1 * number2).toPrecision(12));
             break;
-        case '/':
+        case '÷':
             if (temp2ndNum === 0) {
                 divByZero = true;
                 break;
             };
-            calcArray[0] = Number((number1 / number2).toPrecision(9));
+            calcArray[0] = Number((number1 / number2).toPrecision(12));
             break;
     }
 }
