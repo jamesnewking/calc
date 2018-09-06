@@ -16,7 +16,7 @@ body {
 
 @font-face {
     font-family: digitalType;
-    src: url(fonts/DIGITALDREAM.TTF);
+    src: url("fonts/digitaldream.ttf");
 }
 
 .horizontal_borders {
