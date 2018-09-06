@@ -269,7 +269,7 @@ function doMath(inOperator){
         //the value should be a number already
         mathEngine(calcArray[0], tempOperator, originalRepeatVal);
     }
-    else if( inOperator === 'x' || inOperator === '/' || inOperator === '+' || inOperator === '-') {
+    else if( inOperator === 'x' || inOperator === '÷' || inOperator === '+' || inOperator === '-') {
         //case of rolling operator 1 + 1 + = + =
         tempOperator = inOperator;
         calcArray.pop(); //remove the operator
@@ -316,9 +316,9 @@ function displayOnTop(){
 
 function displayOnBottom(inDisplay){
     var lastChar = inDisplay.slice(-1);
-    if (lastChar === '+' || lastChar === '-' || lastChar === 'x' || lastChar === '/'){
+    if (lastChar === '+' || lastChar === '-' || lastChar === 'x' || lastChar === '÷'){
         inDisplay = inDisplay.slice(0,inDisplay.length-1);
-    } else if (['x','/','+','-'].indexOf(calcArray[1])>-1){
+    } else if (['x','÷','+','-'].indexOf(calcArray[1])>-1){
         //to strip out the previous operands, removes 999x in 999x999
         inDisplay = calcArray[calcArray.length-1];
     } else if ((divByZero === true) || calcArray[0]===Infinity){
